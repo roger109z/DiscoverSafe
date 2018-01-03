@@ -38,9 +38,9 @@ local function menu(tbl)
     end
     for i = 1+scroll, #tbl+scroll do
       term.setCursorPos(2, i)
-      term.write(v)
+      term.write(tbl[i])
     end
-    term.setCursorPos(1, scroll)
+    term.setCursorPos(1, selected-scroll)
     term.write(">")
     local act = { os.pullEvent("key") }
     if act[2] == keys.up and selected > 1 then
