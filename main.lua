@@ -64,7 +64,7 @@ while true do
     local status = Discover.User:Login(username, password)
     print(tostring(status))
     sleep(1)
-  elseif action == "Cloud then
+  elseif action == "Cloud" then
     local status, files = Discover.Cloud:List()
     local file = menu(files)
     Discove.Cloud:Install(file)
